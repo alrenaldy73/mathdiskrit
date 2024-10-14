@@ -1,0 +1,769 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Aljabar Boolean &amp; Gerbang Logika &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Aljabar Boolean & Gerbang Logika';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="prev" title="HIMPUNAN" href="Himpunan.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Logika%20Matematika.html">Logika Matematika</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Algoritma.html">Algoritma</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Himpunan.html">HIMPUNAN</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aljabar Boolean &amp; Gerbang Logika</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAljabar Boolean & Gerbang Logika.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Aljabar Boolean & Gerbang Logika.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Aljabar Boolean & Gerbang Logika</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aljabar-boolean">Aljabar Boolean</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-aljabar-boolean">Operasi Aljabar Boolean</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gerbang-logika">Gerbang Logika</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-gerbang-logika">Jenis Gerbang Logika</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manfaat-dalam-pemrograman">Manfaat Dalam Pemrograman</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-dalam-pemrograman-python">Contoh Dalam Pemrograman Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Aljabar Boolean</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-algebra">Boolean Algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logic-gates">Logic Gates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Gerbang Logika</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Logic Gates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komponen-digital">Komponen Digital</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinational-circuits">Combinational Circuits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refrensi">Refrensi</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="aljabar-boolean-gerbang-logika">
+<h1>Aljabar Boolean &amp; Gerbang Logika<a class="headerlink" href="#aljabar-boolean-gerbang-logika" title="Link to this heading">#</a></h1>
+<section id="pengertian">
+<h2>Pengertian<a class="headerlink" href="#pengertian" title="Link to this heading">#</a></h2>
+<section id="aljabar-boolean">
+<h3>Aljabar Boolean<a class="headerlink" href="#aljabar-boolean" title="Link to this heading">#</a></h3>
+<p>Aljabar Boolean adalah kategori aljabar yang nilai variabelnya adalah nilai kebenaran, benar dan salah, yang biasanya dilambangkan dengan 1 dan 0. Aljabar ini digunakan untuk menganalisis dan menyederhanakan rangkaian digital atau gerbang digital . Aljabar ini juga disebut Aljabar Biner atau Aljabar Logika .  Aljabar ini telah menjadi dasar dalam pengembangan elektronika digital dan tersedia dalam semua bahasa pemrograman modern. Aljabar ini juga digunakan dalam teori himpunan dan statistik.</p>
+<section id="operasi-aljabar-boolean">
+<h4>Operasi Aljabar Boolean<a class="headerlink" href="#operasi-aljabar-boolean" title="Link to this heading">#</a></h4>
+<p>Operasi dasar aljabar Boolean adalah sebagai berikut:</p>
+<ul class="simple">
+<li><p>Operasi Konjungsi atau AND</p></li>
+<li><p>Operasi Disjungsi atau OR</p></li>
+<li><p>Operasi Negasi atau Tidak</p></li>
+</ul>
+<p>Berikut adalah tabel yang mendefinisikan simbol untuk ketiga operasi dasar.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Simbol</p></th>
+<th class="head"><p>Hak Lebih Tinggi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bukan</p></td>
+<td><p>‘ (atau) ¬</p></td>
+<td><p>Paling Tinggi</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dan</p></td>
+<td><p>. (atau) ∧</p></td>
+<td><p>Tengah</p></td>
+</tr>
+<tr class="row-even"><td><p>Atau</p></td>
+<td><p>+ (atau) ∨</p></td>
+<td><p>Terendah</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Misalkan A dan B adalah dua variabel Boolean, maka kita dapat mendefinisikan ketiga operasi tersebut sebagai;</p>
+<ul class="simple">
+<li><p>Konjungsi B atau A DAN B, memenuhi A ∧ B = Benar, jika A = B = Benar atau A ∧ B = Salah.</p></li>
+<li><p>Disjungsi B atau A ATAU B, memenuhi A ∨ B = Salah, jika A = B = Salah, jika tidak A ∨ B = Benar.</p></li>
+<li><p>Negasi A atau ¬A memenuhi ¬A = Salah, jika A = Benar dan ¬A = Benar jika A = Salah</p></li>
+</ul>
+</section>
+</section>
+<section id="gerbang-logika">
+<h3>Gerbang Logika<a class="headerlink" href="#gerbang-logika" title="Link to this heading">#</a></h3>
+<p>Gerbang logika atau logic gate adalah bagian dasar dari perancangan sistem elektronika digital untuk mengubah masukan (input) menjadi sinyal keluaran (output) yang logis sebagai hasil dari voltase atau arus.</p>
+<section id="jenis-gerbang-logika">
+<h4>Jenis Gerbang Logika<a class="headerlink" href="#jenis-gerbang-logika" title="Link to this heading">#</a></h4>
+<p>Mengutip Universitas Sains dan Teknologi Komputer, ada sejumlah jenis logic gate yang digunakan secara umum. Berikut adalah tujuh jenis gerbang logika:</p>
+<ol class="arabic simple">
+<li><p>Gerbang AND
+Gerbang AND merupakan jenis gerbang logika yang memerlukan dua input atau lebih untuk menghasilkan satu output. Hasil output akan berupa 0 bila semua atau salah satu inputnya merupakan bilangan biner 0. Sebaliknya, jika semua input adalah bilangan biner 1, outputnya pun juga 1.</p></li>
+<li><p><strong>Gerbang OR</strong>
+Jenis kedua adalah gerbang OR, yaitu jenis gerbang logika yang sama seperti gerbang AND, memerlukan dua input untuk menghasilkan satu output. Gerbang OR menghasilkan input 1 bila semua atau salah satu input adalah bilangan biner 1. Sementara itu, output menghasilkan 0 bila inputnya bilangan biner 0.</p></li>
+<li><p><strong>Gerbang NOT</strong>
+Gerbang NOT merupakan jenis gerbang yang berfungsi sebagai pembalik keadaan. Bila input bernilai 1, outputnya bernilai 0. Begitupun sebaliknya, output bernilai 1 bila inputnya bernilai 0.</p></li>
+<li><p><strong>Gerbang NAND</strong>
+Jenis gerbang ini merupakan gabungan gerbang AND dan NOT. Artinya, nilai output gerbang NAND adalah kebalikan dari gerbang AND.</p></li>
+<li><p><strong>Gerbang NOR</strong>
+Gerbang ini menjadi gabungan dari gerbang OR dan NOT. Output yang dihasilkan NOR adalah kebalikan dari gerbang OR.</p></li>
+<li><p><strong>Gerbang XOR</strong>
+Jenis gerbang logika berikutnya adalah XOR yang membutuhkan dua input juga untuk menghasilkan satu output. Dalam jenis gerbang ini, output yang dihasilkan adalah bilangan biner 1 jika kedua inputnya memiliki bilangan yang berbeda. Sementara itu, bila kedua inputnya merupakan bilangan yang sama, hasil outputnya adalah bilangan biner 0.</p></li>
+<li><p><strong>Gerbang XNOR</strong>
+Gerbang terakhir adalah XNOR. Gerbang ini adalah kebalikan dari XNOR. Bila kedua input yang dimasukkan berbeda, outputnya yang dihasilkan bilangan biner 0. Outputnya akan berupa bilangan biner 1 bila kedua input yang dimasukkan sama.</p></li>
+</ol>
+<p><strong>Operator Biner:</strong>
+Aljabar Boolean memiliki dua operator biner:
+Penjumlahan (+): Digunakan untuk operasi disjungsi (OR).
+Perkalian (⋅): Digunakan untuk operasi konjungsi (AND).</p>
+<p><strong>Operator Uner:</strong>
+Komplemen (’): Digunakan untuk menghasilkan nilai yang berlawanan dari suatu elemen. Misalnya, jika a = 1, maka a’ = 0, dan sebaliknya.</p>
+</section>
+</section>
+</section>
+<section id="manfaat-dalam-pemrograman">
+<h2>Manfaat Dalam Pemrograman<a class="headerlink" href="#manfaat-dalam-pemrograman" title="Link to this heading">#</a></h2>
+<p>Aljabar Boolean sering digunakan dalam pemrograman untuk mengevaluasi ekspresi logika.</p>
+<section id="contoh-dalam-pemrograman-python">
+<h3>Contoh Dalam Pemrograman Python<a class="headerlink" href="#contoh-dalam-pemrograman-python" title="Link to this heading">#</a></h3>
+<p><img alt="Picture1" src="img/PUSING.png" /></p>
+<p><strong>1. Aksioma-Aksioma:</strong>
+Untuk setiap a, b, c ∈ B, berlaku aksioma-aksioma berikut:</p>
+<ul class="simple">
+<li><p>Closure: a + b ∈ B dan a ⋅ b ∈ B.</p></li>
+<li><p>Identitas: a + 0 = a dan a ⋅ 1 = a.</p></li>
+<li><p>Komutatif: a + b = b + a dan a ⋅ b = b ⋅ a.</p></li>
+<li><p>Distributif: a ⋅ (b + c) = (a ⋅ b) + (a ⋅ c) dan a + (b ⋅ c) = (a + b) ⋅ (a + c).</p></li>
+<li><p>Komplemen: Untuk setiap a ∈ B, terdapat elemen unik a’ ∈ B sehingga a + a’ = 1 dan a ⋅ a’ = 0</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Aljabar Boolean adalah sistem matematika untuk manipulasi variabel yang dapat memiliki salah satu dari dua nilai.</p></li>
+<li><p>Dalam logika formal, nilai-nilai ini adalah “benar” dan “salah.”</p></li>
+<li><p>Dalam sistem digital, nilai-nilai ini adalah “nyala” dan “mati,” 1 dan 0, atau “tinggi” dan “rendah.”</p></li>
+<li><p>Ekspresi Boolean dibuat dengan melakukan operasi pada variabel Boolean.</p></li>
+<li><p>Operator Boolean yang umum termasuk AND (AND), (OR), dan (NOT).</p></li>
+</ul>
+</section>
+</section>
+<section id="id1">
+<h2>Aljabar Boolean<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Sebuah operator Boolean dapat dijelaskan sepenuhnya menggunakan tabel kebenaran.</p></li>
+<li><p>Tabel kebenaran untuk operator Boolean D (AND) dan (OR) ditunjukkan di sebelah kanan.</p></li>
+<li><p>Operator AND  juga dikenal sebagai produk Boolean. Operator OR adalah jumlah Boolean..
+<img alt="x and y" src="img/x and y.png" /></p></li>
+</ul>
+</section>
+<section id="boolean-algebra">
+<h2>Boolean Algebra<a class="headerlink" href="#boolean-algebra" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Tabel kebenaran untuk operator Boolean (NOT) ditunjukkan di sebelah kanan.</p></li>
+<li><p>Operasi NOT paling sering dilambangkan dengan garis atas.
+<img alt="Picture1" src="img/Picture1.png" /></p></li>
+<li><p>Sebuah fungsi Boolean memiliki:</p>
+<ul>
+<li><p>Setidaknya satu variabel Boolean,</p></li>
+<li><p>Setidaknya satu operator Boolean, dan</p></li>
+<li><p>Setidaknya satu input dari himpunan {0,1}.</p></li>
+</ul>
+</li>
+<li><p>Fungsi ini menghasilkan output yang juga merupakan anggota dari himpunan {0,1}.</p></li>
+<li><p>Tabel kebenaran untuk fungsi Boolean. :
+<img alt="Picture2" src="img/Picture2.png" /></p></li>
+<li><p>Untuk mempermudah evaluasi fungsi Boolean, tabel kebenaran berisi kolom tambahan (diarsir) untuk menyimpan evaluasi dari bagian-bagian subfungsi.
+<img alt="Picture3" src="img/Picture3.png" />
+<img alt="Picture4" src="img/Picture4.png" /></p></li>
+<li><p>Sebagian besar identitas Boolean memiliki bentuk AND (perkallian) serta bentuk OR (jumlah). Kami menyajikan identitas kami menggunakan kedua bentuk tersebut.
+<img alt="Picture5" src="img/Picture5.png" /></p></li>
+<li><p>Kelompok kedua
+<img alt="Picture6" src="img/Picture6.png" /></p></li>
+<li><p>Kelompok Ketiga
+<img alt="Picture7" src="img/Picture7.png" /></p></li>
+<li><p>Terkadang, lebih ekonomis membangun sirkuit dengan menggunakan komplemen fungsi dan mengkomplementasi hasilnya dibandingkan mengimplementasikan fungsi secara langsung. Hukum DeMorgan memudahkan penemuan komplemen dari fungsi Boolean, yang menyatakan: :
+<img alt="Picture8" src="img/Picture8.png" /></p></li>
+</ul>
+</section>
+<section id="logic-gates">
+<h2>Logic Gates<a class="headerlink" href="#logic-gates" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fungsi Boolean diimplementasikan dalam sirkuit komputer digital yang disebut gerbang (gates).</p></li>
+<li><p>Gerbang adalah perangkat elektronik yang menghasilkan hasil berdasarkan dua atau lebih nilai input.</p></li>
+<li><p>Dalam kenyataannya, gerbang terdiri dari satu hingga enam transistor, tetapi desainer digital menganggapnya sebagai satu kesatuan.</p></li>
+<li><p>Sirkuit terintegrasi mengandung kumpulan gerbang yang sesuai untuk tujuan tertentu..</p></li>
+<li><p>Tiga gerbang AND, OR, dan  NOT.
+<img alt="Picture9" src="img/Picture9.png" /></p></li>
+<li><p>Gerbang yang sangat berguna lainnya adalah gerbang eksklusif OR (XOR).</p></li>
+<li><p>Output dari operasi XOR adalah benar hanya ketika nilai-nilai input berbeda.
+<img alt="Picture10" src="img/Picture10.png" />
+Note the special symbol  for the XOR operation.</p></li>
+<li><p>NAND dan NOR dua gerbang yang sangat penting. Simbol dan tabel kebenarannya ditunjukkan di sebelah kanan.
+<img alt="Picture11" src="img/Picture11.png" /></p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>Gerbang Logika<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>NAND dan NOR dikenal dengan gerbang universal  karena mereka murah untuk diproduksi dan setiap fungsi Boolean dapat dibangun menggunakan gerbang ini. NAND atau hanya gerbang NOR .<br />
+<img alt="Picture12" src="img/Picture12.png" /></p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>Logic Gates<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Gerbang dapat memiliki beberapa  inputs dan dan lebih dari satu output.</p>
+<ul>
+<li><p>Output kedua dapat disediakan untuk komplemen dari operasi.
+<img alt="Picture17" src="img/Picture17.png" /></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="komponen-digital">
+<h2>Komponen Digital<a class="headerlink" href="#komponen-digital" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Hal utama yang perlu diingat adalah bahwa kombinasi gerbang menerapkan fungsi Boolean.</p></li>
+<li><p>Rangkaian di bawah ini mengimplementasikan fungsi Boolean :
+<img alt="Picture18" src="img/Picture18.png" />
+<img alt="Picture19" src="img/Picture19.png" />
+Kami menyederhanakan ekspresi Boolean sehingga kami dapat membuat rangkaian yang lebih sederhana.</p></li>
+</ul>
+</section>
+<section id="combinational-circuits">
+<h2>Combinational Circuits<a class="headerlink" href="#combinational-circuits" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Kami telah merancang rangkaian yang mengimplementasikan fungsi Boolean :
+<img alt="Picture13" src="img/Picture13.png" /></p></li>
+<li><p>Rangkaian ini merupakan contoh rangkaian logika kombinasional.</p></li>
+<li><p>Rangkaian logika kombinasional menghasilkan output tertentu</p></li>
+<li><p>Rangkaian logika kombinasional memberi kita banyak perangkat yang berguna.</p></li>
+<li><p>Salah satu yang paling sederhana adalah setengah penambah, yang menemukan jumlah dua bit.</p></li>
+<li><p>Kita dapat memperoleh gambaran tentang konstruksi setengah penambah dengan melihat tabel kebenarannya, yang ditunjukkan di sebelah kanan.
+<img alt="Picture14" src="img/Picture14.png" /></p></li>
+<li><p>Seperti kita lihat, jumlahnya dapat ditemukan menggunakan operasi XOR dan sisanya menggunakan operasi AND.
+<p><img alt="Picture15" src="img/Picture15.png" /></p>
+<img alt="Picture16" src="img/Picture16.png" /></p></li>
+</ul>
+</section>
+<section id="refrensi">
+<h2>Refrensi<a class="headerlink" href="#refrensi" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Byju’s, Aljabar Boolean, <a class="reference external" href="https://byjus.com/maths/boolean-algebra/">https://byjus.com/maths/boolean-algebra/</a></p></li>
+<li><p>Adelaide Wreta, 26 Agustus 2022, Gerbang Logika Adalah: Jenis, Fungsi, dan Simbol <a class="reference external" href="https://www.detik.com/jabar/berita/d-6256628/gerbang-logika-adalah-jenis-fungsi-dan-simbol">https://www.detik.com/jabar/berita/d-6256628/gerbang-logika-adalah-jenis-fungsi-dan-simbol</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Himpunan.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">HIMPUNAN</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="markdown-notebooks.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aljabar-boolean">Aljabar Boolean</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-aljabar-boolean">Operasi Aljabar Boolean</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gerbang-logika">Gerbang Logika</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-gerbang-logika">Jenis Gerbang Logika</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manfaat-dalam-pemrograman">Manfaat Dalam Pemrograman</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-dalam-pemrograman-python">Contoh Dalam Pemrograman Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Aljabar Boolean</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-algebra">Boolean Algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logic-gates">Logic Gates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Gerbang Logika</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Logic Gates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#komponen-digital">Komponen Digital</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinational-circuits">Combinational Circuits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refrensi">Refrensi</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
