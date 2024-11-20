@@ -4,12 +4,18 @@ title: Centrality Graph
 ---
 
 # Analisa Graph
+Grafik merupakan cara untuk merepresentasikan jaringan atau kumpulan objek yang saling terhubung secara formal. Ada banyak alat canggih di luar sana untuk menjelajahi jaringan semacam itu dengan menerapkan algoritma grafik. Namun terkadang sulit untuk melacaknya!
 ### Social Network Analysis 
 merupakan bidang kajian yang mengekplorasitentang hubungan manusia dengan menggunakan teori graf. Implementasi Social Network Analysis dapat menjelaskan relasi atau hubungan antar aktor melalui visualisasi berbentuk graf. Relasi dalam analisis jaringan sosial dapat diproses dalam bentuk perhitungan yang disebut centrality dalam sebuah jaringan sosial sesuai dengan posisi masing-masing aktor di dalam struktur jaringan tersebut
 ![Picture1](https://hackmd.io/_uploads/B1P0rbIzJg.png)
 
 ![Picture2](https://hackmd.io/_uploads/B1ikI-Ifye.png)
 
+1. **Node (simpul)**: Node merepresentasikan individu atau aktor dalam jaringan sosial. Dalam gambar ini, node diberi label angka 1 hingga 9.
+1. **Edges (garis penghubung)**: Garis penghubung antara dua node menunjukkan adanya relasi atau hubungan antara individu-individu tersebut. Contohnya, ada garis yang menghubungkan node 4 dan 5, yang berarti ada hubungan antara individu ke-4 dan ke-5.
+1. **Adjacency Matrix (Matriks Ketetanggaan)**: Matriks ini adalah representasi matematis dari jaringan tersebut. Baris dan kolom matriks menunjukkan node, sementara angka "1" menunjukkan ada hubungan (edge) antara dua node, dan angka "0" menunjukkan tidak ada hubungan. Contoh:
+   * Baris 4, kolom 5 memiliki angka "1," yang berarti node 4 terhubung dengan node 5.
+   * Baris 2, kolom 3 memiliki angka "0," yang berarti node 2 tidak terhubung dengan node 3.
 ### Social network 
 terdapat node yang mewakili orang atau individu atau aktor. Relasi  antar objek  dapat dinyatakan dengan link atau edges yang terjadi antara aktor tersebut Social network terdiri dari banyak aktor yang mempunyai relasi satu sama lain hingga membentuk peta jaringan sosial yang dinyatakan dengan 
 graph
@@ -24,8 +30,19 @@ graph
 ## Degree Centrality
 * Degree centrality adalah jumlah edge yang terkoneksi pada suatu node yang mewakili interaksi.
 * Pentingnya node ditentukan oleh jumlah node yang berdekatan dengan node tersebut
-    *  Degree Centrality!  ![Picture3](https://hackmd.io/_uploads/S1_QDZUGye.png)
-    * Normalisasi  Degree Centrality:  ![Picture4](https://hackmd.io/_uploads/ByeMDbLMJe.png)
+    *  Degree Centrality!  
+    ![Picture3](https://hackmd.io/_uploads/S1_QDZUGye.png)
+       * Pada gambar, node 1 memiliki 3 koneksi (ke node 3, 4, dan 5). Maka, degree centrality-nya adalah 3.
+    * Normalisasi  Degree Centrality:  
+    ![Picture4](https://hackmd.io/_uploads/ByeMDbLMJe.png)
+      * Normalisasi degree centrality digunakan untuk mengukur centrality dengan skala 0 hingga 1 agar bisa dibandingkan dalam jaringan dengan ukuran berbeda.
+Di mana:
+        * $n$ adalah jumlah total node dalam jaringan.
+        * $n$−1 adalah jumlah maksimum koneksi yang mungkin dimiliki oleh satu node (karena satu node tidak terhubung ke dirinya sendiri).
+Contoh:
+        * Dalam jaringan ini, $𝑛=9$ (total node).
+Untuk node 1, degree-nya adalah $𝑑1=3$. Maka, normalisasi degree centrality adalah:
+![chat gpt](https://hackmd.io/_uploads/ByB9P4iMyg.png)
 
   ![Picture6](https://hackmd.io/_uploads/rJzwwb8zJl.png)
 Untuk  node 1, degree centrality adalah 3;
@@ -41,6 +58,9 @@ Normalisasi degree centrality adalah
 ![Picture9](https://hackmd.io/_uploads/SyiAtWLfJg.png)
 ![Picture10](https://hackmd.io/_uploads/SyoyqbUfye.png)
 ![Picture11](https://hackmd.io/_uploads/HyKx9ZLGyg.png)
+* Angka **9** berasal dari jumlah total node dalam jaringan pada gambar tersebut. Ada **9  node** yang diberi label angka 1 hingga 9, sehingga $n=9$.
+* Angka 8 berasal dari $n−1$, di mana $n$ adalah jumlah total node dalam jaringan.
+
 Node 4  lebih central  dari node 3
 ## Betweenness Centrality
 * Skor betweeness Centrality mewakili seberapa besar informasi yang tersebar dari suatu aktor. Semakin besar skor, artinya aktor tersebut semakin berperan dalam penyebaran informasi 
@@ -52,13 +72,15 @@ Node 4  lebih central  dari node 3
 ![Picture12](https://hackmd.io/_uploads/ByGyi-Izkl.png)
 ![Picture15](https://hackmd.io/_uploads/SJ44j-8M1x.png)  Jumlah lintasan terpendek antara  s dan t
 ![Picture16](https://hackmd.io/_uploads/H1gHibUzJg.png) Jumlah lintasan terpendek antara s dan t yang melewati vi
-# Betweenness Centrality
+## Betweenness Centrality
 ![Picture17](https://hackmd.io/_uploads/HJBy2bIfJg.png)![Picture18](https://hackmd.io/_uploads/S1YJ3WLfke.png)
 ![Picture19](https://hackmd.io/_uploads/HkVl2ZUM1g.png)
 **betweenness centrality  untuk node 5?**
 ![Picture20](https://hackmd.io/_uploads/r1y5h-Lfkx.png)   Jumlah path terpendek antara  s dan t
 ![Picture21](https://hackmd.io/_uploads/rJL9nbUMyl.png)  Jumlah path terpendek antara s dan t yang melewati  vi
 ![Picture22](https://hackmd.io/_uploads/SJ1i2ZLfkx.png)
-# Normalisasi Betweenness Centrality
+## Normalisasi Betweenness Centrality
 ![Picture23](https://hackmd.io/_uploads/HyUt6Z8fJg.png)
 
+## Refrensi
+https://memgraph.com/blog/learn-graph-analytics-with-python

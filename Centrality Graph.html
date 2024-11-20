@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Centrality Graph';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -152,7 +154,7 @@
       
     
     
-    <img src="_static/koim.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
     <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   
@@ -181,11 +183,9 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Logika%20Matematika.html">Logika Matematika</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Algoritma.html">Algoritma</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Himpunan.html">Himpunan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Himpunan.html">HIMPUNAN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Aljabar%20Boolean%20%26%20Gerbang%20Logika.html">Aljabar Boolean &amp; Gerbang Logika</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Centrality Graph</a></li>
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Analisa Graph</a></li>
 </ul>
 
     </div>
@@ -381,19 +381,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Analisa Graph</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#social-network-analysis">Social Network Analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#social-network">Social network</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degree-centrality">Degree Centrality</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closeness-centrality">Closeness Centrality</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-closeness-centrality">Contoh Closeness Centrality</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betweenness-centrality">Betweenness Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Betweenness Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-betweenness-centrality">Normalisasi Betweenness Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refrensi">Refrensi</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Betweenness Centrality</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-betweenness-centrality">Normalisasi Betweenness Centrality</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -406,11 +403,22 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="analisa-graph">
 <h1>Analisa Graph<a class="headerlink" href="#analisa-graph" title="Link to this heading">#</a></h1>
+<p>Grafik merupakan cara untuk merepresentasikan jaringan atau kumpulan objek yang saling terhubung secara formal. Ada banyak alat canggih di luar sana untuk menjelajahi jaringan semacam itu dengan menerapkan algoritma grafik. Namun terkadang sulit untuk melacaknya!</p>
 <section id="social-network-analysis">
 <h2>Social Network Analysis<a class="headerlink" href="#social-network-analysis" title="Link to this heading">#</a></h2>
-<p>merupakan bidang kajian yang mengekplorasitentang hubungan manusia dengan menggunakan teori graf. Implementasi Social Network Analysis dapat menjelaskan relasi atau hubungan antar aktor melalui visualisasi berbentuk graf. Relasi dalam analisis jaringan sosial dapat diproses dalam bentuk perhitungan yang disebut centrality dalam sebuah jaringan sosial sesuai dengan posisi masing-masing aktor di dalam struktur jaringan tersebut</p>
-<p><img alt="Picture1" src="img/pic1.png" /></p>
-<p><img alt="Picture2" src="img/pic2.png" /></p>
+<p>merupakan bidang kajian yang mengekplorasitentang hubungan manusia dengan menggunakan teori graf. Implementasi Social Network Analysis dapat menjelaskan relasi atau hubungan antar aktor melalui visualisasi berbentuk graf. Relasi dalam analisis jaringan sosial dapat diproses dalam bentuk perhitungan yang disebut centrality dalam sebuah jaringan sosial sesuai dengan posisi masing-masing aktor di dalam struktur jaringan tersebut
+<img alt="Picture1" src="https://hackmd.io/_uploads/B1P0rbIzJg.png" /></p>
+<p><img alt="Picture2" src="https://hackmd.io/_uploads/B1ikI-Ifye.png" /></p>
+<ol class="arabic simple">
+<li><p><strong>Node (simpul)</strong>: Node merepresentasikan individu atau aktor dalam jaringan sosial. Dalam gambar ini, node diberi label angka 1 hingga 9.</p></li>
+<li><p><strong>Edges (garis penghubung)</strong>: Garis penghubung antara dua node menunjukkan adanya relasi atau hubungan antara individu-individu tersebut. Contohnya, ada garis yang menghubungkan node 4 dan 5, yang berarti ada hubungan antara individu ke-4 dan ke-5.</p></li>
+<li><p><strong>Adjacency Matrix (Matriks Ketetanggaan)</strong>: Matriks ini adalah representasi matematis dari jaringan tersebut. Baris dan kolom matriks menunjukkan node, sementara angka “1” menunjukkan ada hubungan (edge) antara dua node, dan angka “0” menunjukkan tidak ada hubungan. Contoh:</p>
+<ul class="simple">
+<li><p>Baris 4, kolom 5 memiliki angka “1,” yang berarti node 4 terhubung dengan node 5.</p></li>
+<li><p>Baris 2, kolom 3 memiliki angka “0,” yang berarti node 2 tidak terhubung dengan node 3.</p></li>
+</ul>
+</li>
+</ol>
 </section>
 <section id="social-network">
 <h2>Social network<a class="headerlink" href="#social-network" title="Link to this heading">#</a></h2>
@@ -435,11 +443,31 @@ graph</p>
 <li><p>Degree centrality adalah jumlah edge yang terkoneksi pada suatu node yang mewakili interaksi.</p></li>
 <li><p>Pentingnya node ditentukan oleh jumlah node yang berdekatan dengan node tersebut</p>
 <ul class="simple">
-<li><p>Degree Centrality!  <img alt="Picture3" src="img/pic3.png" /></p></li>
-<li><p>Normalisasi  Degree Centrality:  <img alt="Picture4" src="img/pic4.png" /></p></li>
+<li><p>Degree Centrality!<br />
+<img alt="Picture3" src="https://hackmd.io/_uploads/S1_QDZUGye.png" /></p>
+<ul>
+<li><p>Pada gambar, node 1 memiliki 3 koneksi (ke node 3, 4, dan 5). Maka, degree centrality-nya adalah 3.</p></li>
 </ul>
-<p><img alt="Picture6" src="img/pic5.png" /></p>
-<p></p>Untuk  node 1, degree centrality adalah 3;
+</li>
+<li><p>Normalisasi  Degree Centrality:<br />
+<img alt="Picture4" src="https://hackmd.io/_uploads/ByeMDbLMJe.png" /></p>
+<ul>
+<li><p>Normalisasi degree centrality digunakan untuk mengukur centrality dengan skala 0 hingga 1 agar bisa dibandingkan dalam jaringan dengan ukuran berbeda.
+Di mana:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(n\)</span> adalah jumlah total node dalam jaringan.</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span>−1 adalah jumlah maksimum koneksi yang mungkin dimiliki oleh satu node (karena satu node tidak terhubung ke dirinya sendiri).
+Contoh:</p></li>
+<li><p>Dalam jaringan ini, <span class="math notranslate nohighlight">\(𝑛=9\)</span> (total node).
+Untuk node 1, degree-nya adalah <span class="math notranslate nohighlight">\(𝑑1=3\)</span>. Maka, normalisasi degree centrality adalah:
+<img alt="chat gpt" src="https://hackmd.io/_uploads/ByB9P4iMyg.png" /></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Picture6" src="https://hackmd.io/_uploads/rJzwwb8zJl.png" />
+Untuk  node 1, degree centrality adalah 3;
 Normalisasi degree centrality adalah<br />
 3/(9-1)=3/8.</p>
 </li>
@@ -457,8 +485,12 @@ Normalisasi degree centrality adalah<br />
 <h2>Contoh Closeness Centrality<a class="headerlink" href="#contoh-closeness-centrality" title="Link to this heading">#</a></h2>
 <p><img alt="Picture9" src="https://hackmd.io/_uploads/SyiAtWLfJg.png" />
 <img alt="Picture10" src="https://hackmd.io/_uploads/SyoyqbUfye.png" />
-<img alt="Picture11" src="https://hackmd.io/_uploads/HyKx9ZLGyg.png" />
-Node 4  lebih central  dari node 3</p>
+<img alt="Picture11" src="https://hackmd.io/_uploads/HyKx9ZLGyg.png" /></p>
+<ul class="simple">
+<li><p>Angka <strong>9</strong> berasal dari jumlah total node dalam jaringan pada gambar tersebut. Ada <strong>9  node</strong> yang diberi label angka 1 hingga 9, sehingga <span class="math notranslate nohighlight">\(n=9\)</span>.</p></li>
+<li><p>Angka 8 berasal dari <span class="math notranslate nohighlight">\(n−1\)</span>, di mana <span class="math notranslate nohighlight">\(n\)</span> adalah jumlah total node dalam jaringan.</p></li>
+</ul>
+<p>Node 4  lebih central  dari node 3</p>
 </section>
 <section id="betweenness-centrality">
 <h2>Betweenness Centrality<a class="headerlink" href="#betweenness-centrality" title="Link to this heading">#</a></h2>
@@ -474,9 +506,8 @@ Node 4  lebih central  dari node 3</p>
 <img alt="Picture16" src="https://hackmd.io/_uploads/H1gHibUzJg.png" /> Jumlah lintasan terpendek antara s dan t yang melewati vi</p></li>
 </ul>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Betweenness Centrality<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2>Betweenness Centrality<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p><img alt="Picture17" src="https://hackmd.io/_uploads/HJBy2bIfJg.png" /><img alt="Picture18" src="https://hackmd.io/_uploads/S1YJ3WLfke.png" />
 <img alt="Picture19" src="https://hackmd.io/_uploads/HkVl2ZUM1g.png" />
 <strong>betweenness centrality  untuk node 5?</strong>
@@ -484,9 +515,14 @@ Node 4  lebih central  dari node 3</p>
 <img alt="Picture21" src="https://hackmd.io/_uploads/rJL9nbUMyl.png" />  Jumlah path terpendek antara s dan t yang melewati  vi
 <img alt="Picture22" src="https://hackmd.io/_uploads/SJ1i2ZLfkx.png" /></p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="normalisasi-betweenness-centrality">
-<h1>Normalisasi Betweenness Centrality<a class="headerlink" href="#normalisasi-betweenness-centrality" title="Link to this heading">#</a></h1>
+<section id="normalisasi-betweenness-centrality">
+<h2>Normalisasi Betweenness Centrality<a class="headerlink" href="#normalisasi-betweenness-centrality" title="Link to this heading">#</a></h2>
 <p><img alt="Picture23" src="https://hackmd.io/_uploads/HyUt6Z8fJg.png" /></p>
+</section>
+<section id="refrensi">
+<h2>Refrensi<a class="headerlink" href="#refrensi" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://memgraph.com/blog/learn-graph-analytics-with-python">https://memgraph.com/blog/learn-graph-analytics-with-python</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -544,19 +580,16 @@ Node 4  lebih central  dari node 3</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Analisa Graph</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#social-network-analysis">Social Network Analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#social-network">Social network</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degree-centrality">Degree Centrality</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closeness-centrality">Closeness Centrality</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-closeness-centrality">Contoh Closeness Centrality</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betweenness-centrality">Betweenness Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Betweenness Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-betweenness-centrality">Normalisasi Betweenness Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refrensi">Refrensi</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Betweenness Centrality</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-betweenness-centrality">Normalisasi Betweenness Centrality</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
