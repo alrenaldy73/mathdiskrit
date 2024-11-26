@@ -618,18 +618,18 @@ n \cdot(n-1)! &amp; \text{,} n &gt; 0.
 <section id="algoritma-menghitung-faktorial">
 <h3>Algoritma menghitung faktorial:<a class="headerlink" href="#algoritma-menghitung-faktorial" title="Link to this heading">#</a></h3>
 <p><strong>function</strong> Faktorial (input  n :integer) <span class="math notranslate nohighlight">\(\to\)</span> integer</p>
-<p>{ mengembalikan nilai n!;
-basis   : jika <span class="math notranslate nohighlight">\(n = 0\)</span>, maka <span class="math notranslate nohighlight">\(0! = 1\)</span>
-rekurens: jika <span class="math notranslate nohighlight">\(n &gt; 0\)</span>, maka <span class="math notranslate nohighlight">\(n! = n \times(n-1)!\)</span>
-}
-DEKLARASI
--
-ALGORITMA:
-<strong>if</strong> <em>n</em> <strong>= 0 then</strong>
-<strong>return 1</strong> <strong>{ basis }
-else</strong>
-<strong>return</strong> <em>n</em> * <em>Faktorial</em>(<em>n</em> – 1)	{ rekurens }
-<strong>end</strong></p>
+<br>{ mengembalikan nilai n!;
+<br>basis   : jika <span class="math notranslate nohighlight">\(n = 0\)</span>, maka <span class="math notranslate nohighlight">\(0! = 1\)</span>
+<br>rekurens: jika <span class="math notranslate nohighlight">\(n &gt; 0\)</span>, maka <span class="math notranslate nohighlight">\(n! = n \times(n-1)!\)</span>
+<br>}
+<br>DEKLARASI
+<br>-
+<br>ALGORITMA:
+<br><strong>if</strong> <em>n</em> <strong>= 0 then</strong>
+<br><strong>   return 1</strong> <strong>{ basis }
+<br>else</strong>
+<br><strong>   return</strong> <em>n</em> * <em>Faktorial</em>(<em>n</em> – 1)	{ rekurens }
+<br><strong>end</strong></p>
 <ul class="simple">
 <li><p>Contoh 8: Barisan Fibonacci  0, 1, 1, 2, 3, 5, 8, 11, 19, …. Dapat dinyatakan secara rekursif sebagai berikut:
 <span class="math notranslate nohighlight">\(f_n =
@@ -646,9 +646,9 @@ x, &amp; \text{jika } n = 1, \\
 2x \cdot T(n-1, x) - T(n-2, x), &amp; \text{jika } n &gt; 1.
 \end{cases}\)</span></p></li>
 <li><p>Contoh 10: Sumasi <span class="math notranslate nohighlight">\(\quad \sum_{k=0}^n a_k \quad\)</span>didefinisikan secara rekursif sebagai         berikut:
-<span class="math notranslate nohighlight">\(\sum_{k=0}^n a_k = a_0 + a_1 + a_2 + \ldots + a_{n-1} + a_n\)</span>
-<span class="math notranslate nohighlight">\(= ((a_0 + a_1 + a_2 + \ldots + a_{n-1}) + a_n)\)</span>
-<span class="math notranslate nohighlight">\(= \left( \sum_{k=0}^{n-1} a_k \right) + a_n\)</span>
+<br><span class="math notranslate nohighlight">\(\sum_{k=0}^n a_k = a_0 + a_1 + a_2 + \ldots + a_{n-1} + a_n\)</span>
+    <br><span class="math notranslate nohighlight">\(= ((a_0 + a_1 + a_2 + \ldots + a_{n-1}) + a_n)\)</span>
+    <br><span class="math notranslate nohighlight">\(= \left( \sum_{k=0}^{n-1} a_k \right) + a_n\)</span>
 sehingga
 <span class="math notranslate nohighlight">\(\sum_{k=0}^n a_k =\begin{cases} 
 a_0, &amp; n = 0 \\
