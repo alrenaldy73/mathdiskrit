@@ -526,25 +526,25 @@ Posterior adalah probabilitas hipotesis <span class="math notranslate nohighligh
 <h2>Langkah-langkah Analisis dengan Prior, Likelihood, dan Posterior<a class="headerlink" href="#langkah-langkah-analisis-dengan-prior-likelihood-dan-posterior" title="Link to this heading">#</a></h2>
 <ol class="arabic">
 <li><p><strong>Prior <span class="math notranslate nohighlight">\((P(S))\)</span></strong>
-Probabilitas awal seseorang menderita penyakit, sebelum mengetahui hasil tes:
-<span class="math notranslate nohighlight">\(P(S) = 0.001\)</span> <strong>(karena prevalensi penyakit adalah <span class="math notranslate nohighlight">\(0.1%\)</span>)</strong>
-Probabilitas seseorang tidak sakit <span class="math notranslate nohighlight">\((𝑃(¬𝑆))\)</span> adalah:
-<span class="math notranslate nohighlight">\(P(¬S)=1−P(S)=0.999.\)</span></p></li>
+<br>Probabilitas awal seseorang menderita penyakit, sebelum mengetahui hasil tes:
+<br><span class="math notranslate nohighlight">\(P(S) = 0.001\)</span> <strong>(karena prevalensi penyakit adalah <span class="math notranslate nohighlight">\(0.1%\)</span>)</strong>
+<br>Probabilitas seseorang tidak sakit <span class="math notranslate nohighlight">\((𝑃(¬𝑆))\)</span> adalah:
+<br><span class="math notranslate nohighlight">\(P(¬S)=1−P(S)=0.999.\)</span></p></li>
 <li><p><strong>Likelihood <span class="math notranslate nohighlight">\((P(T+|S) dan P(T+|\neg S))\)</span></strong>
-Probabilitas mendapatkan hasil tes positif:</p>
+<br>Probabilitas mendapatkan hasil tes positif:</p>
 <ul class="simple">
 <li><p>Jika seseorang sakit <span class="math notranslate nohighlight">\((P(T+∣S)): 0.99\)</span> (sensitivitas).</p></li>
 <li><p>Jika seseorang tidak sakit <span class="math notranslate nohighlight">\((P(T+∣¬S)): 0.05\)</span>  (false positive rate).</p></li>
 </ul>
 </li>
 <li><p><strong>Evidence <span class="math notranslate nohighlight">\((P(T+))\)</span></strong>
-Probabilitas bahwa hasil tes positif secara keseluruhan (tanpa memandang apakah seseorang sakit atau tidak):</p>
+<br>Probabilitas bahwa hasil tes positif secara keseluruhan (tanpa memandang apakah seseorang sakit atau tidak):</p>
 <p><span class="math notranslate nohighlight">\(P(T+)=P(T+∣S)⋅P(S)+P(T+∣¬S)⋅P(¬S).\)</span></p>
 <p>Substitusi nilai:</p>
 <p><span class="math notranslate nohighlight">\(P(T+)=(0.99⋅0.001)+(0.05⋅0.999)=0.00099+0.04995=0.05094.\)</span></p>
 </li>
 <li><p><strong>Posterior <span class="math notranslate nohighlight">\((P(S|T+))\)</span></strong>
-Probabilitas seseorang benar-benar sakit jika hasil tes positif, menggunakan Teorema Bayes:</p>
+<br>Probabilitas seseorang benar-benar sakit jika hasil tes positif, menggunakan Teorema Bayes:</p>
 <p><span class="math notranslate nohighlight">\(P(S|T+) = \frac{P(T+|S) \cdot P(S)}{P(T+)}\)</span></p>
 <p>Substitusi nilai:</p>
 <p><span class="math notranslate nohighlight">\(P(S|T+) = \frac{0.99 \cdot 0.001}{0.05094} \approx 0.0194 \quad \text{(sekitar 1.94%)}.\)</span></p>
